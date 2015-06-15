@@ -1,0 +1,33 @@
+{
+    "name": "apsynf/model-manager-bundle",
+    "type": "symfony-bundle",
+    "description": "Intégration d'une classe de base pour les model manager  symfony2",
+    "keywords": ["form", "extra form", "bootstrap", "bootstrap form", "template"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeff G",
+            "email": "jf.gruet@apsynth.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Apsynf\\Bundle\\ModelManagerBundle\\": ""
+        }
+    },
+    "target-dir": "Apsynf/Bundle/ModelManagerBundle",
+    "require": {
+		
+    },
+    "suggest":  {
+		
+    },
+    "scripts": {
+        
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    }
+}
