@@ -1,6 +1,5 @@
 {
     "name": "JeffGreat/model-manager",
-    "version": "1.0",
     "type": "symfony-bundle",
     "description": "Intégration d'une classe de base pour les model manager  symfony2",
     "keywords": ["form", "extra form", "bootstrap", "bootstrap form", "template"],
@@ -23,8 +22,5 @@
     "suggest":  {
     },
     "scripts": {
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    
+    }    
 }
