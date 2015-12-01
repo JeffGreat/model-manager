@@ -2,7 +2,7 @@
     "name": "JeffGreat/model-manager",
     "type": "symfony-bundle",
     "description": "Intégration d'une classe de base pour les model manager  symfony2",
-    "keywords": ["form", "extra form", "bootstrap", "bootstrap form", "template"],
+    "keywords": ["symfony", "manager", "model", "entity"],
     "license": "MIT",
     "version": "1.0.0-stable",
     "authors": [
