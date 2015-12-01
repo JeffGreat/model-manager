@@ -6,3 +6,8 @@ services:
         calls:
             - [setContainer, ["@service_container"]]
             - [setManager, ["@doctrine.orm.entity_manager"]]
+    document_manager:
+        abstract:  true
+        calls:
+            - [setContainer, ["@service_container"]]
+            - [setManager, ["@doctrine.odm.mongodb.document_manager"]]
