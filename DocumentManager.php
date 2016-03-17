@@ -1,4 +1,5 @@
 <?php
+
 namespace Apsynf\Bundle\ModelManagerBundle;
 
 abstract class DocumentManager {
@@ -23,7 +24,7 @@ abstract class DocumentManager {
         $metadata = $dm->getClassMetadata($this->class);
         $this->class = $metadata->name;
     }
-    
+
     public function setContainer($container) {
         $this->container = $container;
     }
@@ -53,21 +54,21 @@ abstract class DocumentManager {
      * @param boolean $flush
      * @return BaseModel
      */
-    public function persist($model, $flush= true) {
+    public function persist($model, $flush = true) {
         $this->_persist($model, $flush);
         return $model;
     }
 
     /**
-     *	This is basic persist function. Child model can overwrite this.
+     * 	This is basic persist function. Child model can overwrite this.
      */
-    protected function _persist($model, $flush=true) {
+    protected function _persist($model, $flush = true) {
         $this->em->persist($model);
         if ($flush) {
             $this->em->flush();
         }
     }
-    
+
     /**
      * Update the model
      *
@@ -75,15 +76,15 @@ abstract class DocumentManager {
      * @param boolean $flush
      * @return BaseModel
      */
-    public function update($model, $flush= true) {
+    public function update($model, $flush = true) {
         $this->_update($flush);
         return $model;
     }
 
     /**
-     *	This is basic update function. Child model can overwrite this.
+     * 	This is basic update function. Child model can overwrite this.
      */
-    protected function _update($flush=true) {
+    protected function _update($flush = true) {
         if ($flush) {
             $this->em->flush();
         }
@@ -134,6 +135,15 @@ abstract class DocumentManager {
 
     public function isDebug() {
         return $this->container->get('kernel')->isDebug();
+    }
+
+    /**
+     * Get logged user
+     * @return type
+     */
+    public function getUser() {
+        $security = $this->container->get('security.token_storage');
+        return $security->getToken()->getUser() ? $security->getToken()->getUser() : null;
     }
 
 }
